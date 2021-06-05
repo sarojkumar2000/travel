@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body  >
+    <center>
+        <h1>Travel Aid For Blind </h1>
+         <h5>Safe Mobility Assistance </h5>
+    </center>
+  <div class="container jumbotron">
+
+
+    
+    <a  data-toggle="modal"  class="btn btn-primary btn-block" href="index.html">BACK</a>
+    <div class="input-group ">
+      <input id='myInput' onkeyup='searchTable()' type="text" class="form-control" placeholder="search..." aria-label="Recipient's username" aria-describedby="button-addon2">
+        <button class="btn btn-outline-secondary" type=button id="button-addon2"><i class="fa fa-search"></i></button>
+    </div>
+<br>
+    
+      <table id="busnumber"  class="table table-striped" >
+          <tr>
+              <th>Sno</th>
+                  <th>Bus Number</th>
+                      <th>Source & Destination</th>
+                      <th>Source Time</th>
+                      <th>Destination Time</th>
+                      <th>Track</th>
+          </tr>
+          <tr>
+              <td>01</td>
+                  <td>201</td>
+                      <td id="1">Medchal & CMR Group  </td>
+                      <td>7:00  </td>
+                      <td>7:30  </td>
+                      <td><p><input id="1t" type="button" id="bt" value="Track Bus"class="btn btn-primary btn-block-small" onclick="b1()"  /></p> </td>
+                      
+                 
+          </tr>
+          <tr>
+              <td>02</td>
+                  <td>202</td>
+                      <td>Suchitra & Medchal</td>
+                      <td>8:00   </td>
+                      <td>8:40   </td>
+                      <td><p><input id= "2t" type="button" id="bt" value="Track Bus"class="btn btn-primary btn-block-small" onclick="b2()" /></p> </td>
+          </tr>
+          <tr>
+              <td>03</td>
+                  <td>203</td>
+                      <td>Patancheru & Medchal</td>
+                      <td>8:10   </td>
+                      <td>9:40   </td>
+                      <td><p><input type="button" id="bt" value="Track Bus"class="btn btn-primary btn-block-small" onclick="b3()" /></p> </td>
+          </tr>
+          <tr>
+              <td>04</td>
+                  <td>204</td>
+                      <td>Secunderabad & Medchal</td>
+                      <td>8:30   </td>
+                      <td>9:30   </td>
+                      <td><p><input type="button" id="bt" value="Track Bus"class="btn btn-primary btn-block-small" onclick="b4()" /></p> </td>
+          </tr> <tr>
+              <td>05</td>
+                  <td>205</td>
+                      <td>Kukatpally & Medchal</td>
+                      <td>9:00   </td>
+                      <td>10:10   </td>
+                      <td><p><input type="button" id="bt" value="Track Bus"class="btn btn-primary btn-block-small" onclick="b5()" /></p> </td>
+                      
+          </tr> 
+          <tr>
+              <td>06</td>
+                  <td>206</td>
+                      <td>Medchal & Patancheru</td>
+                      <td>9:30   </td>
+                      <td>10:30   </td>
+                      <td><p><input type="button" id="bt" value="Track Bus"class="btn btn-primary btn-block-small" onclick="b6()" /></p> </td>
+          </tr> <tr>
+              <td>07</td>
+                  <td>207</td>
+                      <td>Medchal & Kompally</td>
+                      <td>9:00   </td>
+                      <td>10:10   </td>
+                      <td><p><input type="button" id="bt" value="Track Bus"class="btn btn-primary btn-block-small" onclick="b7()" /></p> </td>
+          </tr>
+  
+      </table>
+      <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
+    
+      <script>
+          
+    
+        function b1(){
+            let users=['Medchal Check Post','CMR Group','Medchal'];
+            let index=getRandomNumber(0,users.length-1);
+            swal("Bus Location:"+users[index], "");
+function getRandomNumber(min,max){
+    let step1=max-min+1;
+    let step2=Math.random()*step1;
+    let result=Math.floor(step2)+min;
+    return result;
+ 
+           
+   }
+}
+
+function b2(){
+    let users=['Suchitra','Kompally','Kandlakoya','CMR Group','Medchal'];
+            let index=getRandomNumber(0,users.length-1);
+            swal("Bus Location:"+users[index], "");
+function getRandomNumber(min,max){
+    let step1=max-min+1;
+    let step2=Math.random()*step1;
+    let result=Math.floor(step2)+min;
+    return result;
+
+    
+   }
+}
+
+function b3(){
+    let users=['patancheru','Suchitra','Kompally','Kandlakoya','CMR Group','Medchal','Kukatpaly','Balanagar','Bowenpally'];
+            let index=getRandomNumber(0,users.length-1);
+            swal("Bus Location:"+users[index], "");
+function getRandomNumber(min,max){
+    let step1=max-min+1;
+    let step2=Math.random()*step1;
+    let result=Math.floor(step2)+min;
+    return result;
+
+    
+   }
+      
+   }
+
+
+
+
+   function b4(){
+    let users=['Suchitra','Kompally','Kandlakoya','CMR Group','Medchal','Secunderabad','Paradise','Bowenpally',];
+            let index=getRandomNumber(0,users.length-1);
+            swal("Bus Location:"+users[index], "");
+function getRandomNumber(min,max){
+    let step1=max-min+1;
+    let step2=Math.random()*step1;
+    let result=Math.floor(step2)+min;
+    return result;
+
+    
+   }
+      
+   }
+   function b5(){
+    let users=['Suchitra','Kompally','Kandlakoya','CMR Group','Medchal','Bowenpally','Kukatpally','Balanagar'];
+            let index=getRandomNumber(0,users.length-1);
+            swal("Bus Location:"+users[index], "");
+function getRandomNumber(min,max){
+    let step1=max-min+1;
+    let step2=Math.random()*step1;
+    let result=Math.floor(step2)+min;
+    return result;
+
+   }
+}
+   
+function b6(){
+    let users=['patancheru','Suchitra','Kompally','Kandlakoya','CMR Group','Medchal','Kukatpaly','Balanagar','Bowenpally'];
+            let index=getRandomNumber(0,users.length-1);
+            swal("Bus Location:"+users[index], "");
+function getRandomNumber(min,max){
+    let step1=max-min+1;
+    let step2=Math.random()*step1;
+    let result=Math.floor(step2)+min;
+    return result;
+}
+
+    
+      
+   }
+
+   
+   function b7(){
+    let users=['Kompally','Kandlakoya','CMR Group','Medchal'];
+            let index=getRandomNumber(0,users.length-1);
+            swal("Bus Location:"+users[index], "");
+function getRandomNumber(min,max){
+    let step1=max-min+1;
+    let step2=Math.random()*step1;
+    let result=Math.floor(step2)+min;
+    return result;
+      
+   }
+}
+   
+
+
+
+
+   
+   
+</script>
+   
+   <script>
+     function searchTable() {
+         var input, filter, found, table, tr, td, i, j;
+         input = document.getElementById("myInput");
+         filter = input.value.toUpperCase();
+         table = document.getElementById("busnumber");
+         tr = table.getElementsByTagName("tr");
+         for (i = 0; i < tr.length; i++) {
+             td = tr[i].getElementsByTagName("td");
+             for (j = 0; j < td.length; j++) {
+                 if (td[j].innerHTML.toUpperCase().indexOf(filter) > -1) {
+                     found = true;
+                 }
+             }
+             if (found) {
+                 tr[i].style.display = "";
+                 found = false;
+             } else {
+                 tr[i].style.display = "none";
+             }
+         }
+     }
+     </script>
+   
+   
+
+
+
+</body>
+
+
+
+</html>
